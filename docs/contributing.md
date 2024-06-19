@@ -69,7 +69,7 @@ file/folder give a brief explanation of what purpose the file/folder serves.
 │  └── utils.py # utility functions used throughout the project
 ├── docs/
 │  ├── media/ # assets like screenshots or diagrams inserted in .md files
-│  ├── tutorials/ # jupyter notebooks with tutorials and their explanations
+│  ├── guides/ # jupyter notebooks with tutorials and their explanations
 │  ├── architecture.md # the framework's architecture
 │  └── install.md # instructions on installing the framework
 ├── models/
@@ -115,8 +115,9 @@ convert it to a markdown file using `nbconvert`:
 > mv <file>.md index.md
 ```
 
-> Rememeber to move any files that it generates to the `docs/media` folder, and
-> update the hyperlinks in the generated markdown file.
+> Rememeber to rename and move any other files that `nbconvert` generates to the
+> `docs/media/{tutorial-name}` folder, and update the hyperlinks in the
+> generated markdown file.
 
 ## Saving Changes
 

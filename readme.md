@@ -67,79 +67,28 @@ Install the framework using `pip`, like so:
 
 ## Getting Started
 
-The following section depicts the usage of existing models and population data
-to run simulations on your machine. It also acts as a showcase of the Agent
-Torch API.
+AgentTorch provides the following functionalities:
 
-A Jupyter Notebook containing the below examples can be found
-[here](docs/tutorials/using-models/walkthrough.ipynb).
+#### 1. [Using Differentiable Utilities](docs/guides/differentiable-utilities/index.md)
 
-### Executing a Simulation
+#### 2. [Creating Models](docs/guides/creating-models/index.md)
 
-```py
-# re-use existing models and population data easily
-from agent_torch.models import disease
-from agent_torch.populations import new_zealand
+#### 3. [Using Existing Models](docs/guides/using-models/index.md)
 
-# use the executor to plug-n-play
-from agent_torch.execute import Executor
+#### 4. [Creating and Using Population Data](docs/guides/population-data/index.md)
 
-simulation = Executor(disease, new_zealand)
-simulation.execute()
-```
+#### 5. [Capturing Individual Behavior with LLMs](docs/guides/population-behavior/index.md)
 
-### Using Gradient-Based Learning
+#### 6. [Gradient Based Calibration of Models](docs/guides/gradient-calibration/index.md)
 
-```py
-# agent_"torch" works seamlessly with the pytorch API
-from torch.optim import SGD
+#### 7. [Analyzing Models](docs/guides/analyzing-models/index.md)
 
-# create the simulation
-# ...
+## Documentation
 
-# create an optimizer for the learnable parameters
-# in the simulation
-optimizer = SGD(simulation.parameters())
+The complete documentation can be found at
+[lpm.media.mit.edu/docs](https://lpm.media.mit.edu/docs).
 
-# learn from each "episode" and run the next one
-# with optimized parameters
-for i in range(episodes):
-	optimizer.zero_grad()
-
-	simulation.execute()
-	optimizer.step()
-	simulation.reset()
-```
-
-### Talking to the Simulation
-
-```py
-from agent_torch.llm.qa import SimulationAnalysisAgent, load_state_trace
-
-# create the simulation
-# ...
-
-state_trace = load_state_trace(simulation)
-analyzer = SimulationAnalysisAgent(simulation, state_trace)
-
-# ask questions regarding the simulation
-analyzer.query("How are stimulus payments affecting disease?")
-analyzer.query("Which age group has the lowest median income, and how much is it?")
-```
-
-## Guides and Tutorials
-
-### Understanding the Framework
-
-A detailed explanation of the architecture of the Agent Torch framework can be
-found [here](docs/architecture.md).
-
-### Creating a Model
-
-A tutorial on how to create a simple predator-prey model can be found in the
-[`tutorials/`](docs/tutorials/) folder.
-
-### Contributing to Agent Torch
+## Contributing to Agent Torch
 
 Thank you for your interest in contributing! You can contribute by reporting and
 fixing bugs in the framework or models, working on new features for the

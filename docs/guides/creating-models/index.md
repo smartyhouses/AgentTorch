@@ -1,4 +1,4 @@
-# Predator-Prey Model
+# Creating a Predator-Prey Model
 
 <details>
   <summary>Imports</summary>
@@ -711,17 +711,17 @@ for episode in range(num_episodes):
   visualizer.plot(final_states)
 ```
 
-![png](../../media/predator-prey_47_0.png)
+![png](../../media/predator-prey/plot-0.png)
 
-![png](../../media/predator-prey_47_1.png)
+![png](../../media/predator-prey/plot-1.png)
 
-![png](../../media/predator-prey_47_2.png)
+![png](../../media/predator-prey/plot-2.png)
 
-![png](../../media/predator-prey_47_3.png)
+![png](../../media/predator-prey/plot-3.png)
 
-![png](../../media/predator-prey_47_4.png)
+![png](../../media/predator-prey/plot-4.png)
 
-![png](../../media/predator-prey_47_5.png)
+![png](../../media/predator-prey/plot-5.png)
 
 ## Visualization
 

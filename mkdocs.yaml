@@ -9,6 +9,11 @@ nav:
   - 'install.md'
   - 'architecture.md'
   - 'contributing.md'
-  - Tutorials:
-      - 'Creating a Model': 'tutorials/creating-a-model/index.md'
-      - 'Using Models': 'tutorials/using-models/index.md'
+  - Guides:
+      - 'Using Differentiable Utilities': guides/differentiable-utilities/index.md
+      - 'Creating Models': guides/creating-models/index.md
+      - 'Using Existing Models': guides/using-models/index.md
+      - 'Creating and Using Population Data': guides/population-data/index.md
+      - 'Capturing Individual Behavior with LLMs': guides/population-behavior/index.md
+      - 'Gradient Based Calibration of Models': guides/gradient-calibration/index.md
+      - 'Analyzing Models': guides/analyzing-models/index.md

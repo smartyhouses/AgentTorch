@@ -102,4 +102,4 @@ them back to the project.
 
 > **AgentTorch models are being deployed across the globe.**
 
-![Impact](docs/media/impact.png)
+![Impact](docs/media/readme/impact.png)
